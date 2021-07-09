@@ -7,6 +7,34 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Your Library</h1>
-</body>
-</html>
+<h1 th:text="${title}">Default Title</h1>
+
+<p th:unless="${recipes} and ${recipes.size()}">no recipes :( </p>
+
+
+<ul>
+    <li th:each="recipe : ${recipes}" th:text="${recipes}" ></li>
+</ul>
+<!--<table class="table">
+
+    <tr>
+        <th>Recipe Name</th>
+        <th>            </th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>Rating</th>
+
+
+    </tr>
+
+        <tr th:each="recipe : ${recipes}">
+            <td><a th:href="'page/'+${student.()}" th:text="${student.studentname}"></a><td>
+          <td th:text="${recipes.name}"></td>
+          <td th:text="${recipes.description}"></td>
+          <td th:text="${recipes.category}"></td>
+          <td th:text="${recipes.rating}"></td>
+    </tr>-->
+
+  </table>
+  </body>
+  </html>
