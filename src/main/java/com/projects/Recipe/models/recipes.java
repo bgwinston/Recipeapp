@@ -5,12 +5,14 @@ public class recipes {
     private String description;
     private String category;
     private String rating;
+    private String fullrecipe;
 
     public recipes(String name, String description, String category, String rating) {
         this.name=name;
         this.description=description;
         this.category=category;
         this.rating=rating;
+        this.fullrecipe=fullrecipe;
     }
 
     public String getName() {
@@ -43,5 +45,13 @@ public class recipes {
 
     public void setRating(String rating) {
         this.rating = rating;
+    }
+
+    public String getFullrecipe() {
+        return fullrecipe;
+    }
+
+    public void setFullrecipe(String fullrecipe) {
+        this.fullrecipe = fullrecipe;
     }
 }

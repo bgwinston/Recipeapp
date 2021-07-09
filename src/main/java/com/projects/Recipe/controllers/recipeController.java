@@ -21,6 +21,11 @@ public class recipeController {
         model.addAttribute("recipes", recipes);
         return "library/myLibrary";
     }
+    @RequestMapping(value="index")
+    public String category(Model model){
+        model.addAttribute("title","Index");
+        return "library/index";
+    }
     public String remove(){
         return "myLibrary";
     }
