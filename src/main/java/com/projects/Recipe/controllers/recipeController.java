@@ -30,9 +30,10 @@ public class recipeController {
         return "library/add";
     }
     @RequestMapping(value="add", method=RequestMethod.POST)
-    public String processAdd(@RequestParam String recipeName) {
+    public String processAdd(Model model, @RequestParam String recipeName) {
         recipes.add(recipeName);
-        return "library/recipeConfirmation";
+        model.addAttribute("title","Recipe Confirmation");
+        return "library/rconfirmation";
     }
 }
 
