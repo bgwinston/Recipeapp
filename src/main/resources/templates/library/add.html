@@ -9,7 +9,14 @@
   <form method="post">
       <input type="text" name="recipeName"/>
    <!--<input type="text" name="recipeDescription"/>
-      <input type="text" name="recipeCategory"/>
+     <select th:field="*{category}" required>
+        <option value="space">         </option>
+        <option value="Vegan">   Vegan</option>
+        <option value="Vegetarian">      Vegetarian</option>
+        <option value="Pescetarian">   Pescetarian</option>
+        <option value="Meat Eater">   Meat Eater</option>
+        <span th:errors="*{category}" class="error"></span>
+    </select>
       <input type="text" name="recipeRating"/>
       <input type="text" name="recipe"/>-->
     <input type="submit" value="add Recipe"/>
